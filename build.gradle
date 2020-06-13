@@ -22,12 +22,6 @@ allprojects {
         google()
         jcenter()
     }
-
-    android {
-      lintOptions {
-          abortOnError false
-      }
-    }
 }
 
 
