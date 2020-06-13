@@ -18,4 +18,14 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew build; find .
+      run: ./gradlew build
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: app-release-unsigned
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
